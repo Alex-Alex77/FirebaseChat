@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qsi-wI-3ht">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qsi-wI-3ht">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NovitoNova-Regular.otf">
+            <string>NovitoNova-Regular</string>
+        </array>
+        <array key="NovitoNova-Thin.otf">
+            <string>NovitoNova-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="qd1-WP-Crg">
@@ -18,24 +30,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChatChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn8-z4-b1d">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="bqs-JV-4cb"/>
-                                    <constraint firstAttribute="width" constant="197" id="l4F-WE-eBQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SAUSAGE CHAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn8-z4-b1d">
+                                <rect key="frame" x="73" y="140" width="230" height="81"/>
+                                <fontDescription key="fontDescription" name="NovitoNova-Thin" family="NovitoNova" pointSize="67"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD3-Qk-CHO">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Y6-Pj-uci">
+                                <rect key="frame" x="78" y="343" width="219" height="60"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="219" id="Zgb-Ar-aSk"/>
-                                    <constraint firstAttribute="height" constant="50" id="rt3-fR-Bud"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="Login anonymously">
-                                    <color key="titleColor" red="0.021180555560000001" green="0.3170019744" blue="0.66119791670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NovitoNova-Regular" family="NovitoNova" pointSize="40"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.028291495516896248" green="0.64299207925796509" blue="0.88439291715621948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
@@ -43,25 +49,66 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="loginDidTouch:" destination="qsi-wI-3ht" eventType="touchUpInside" id="2fh-E5-9Zk"/>
+                                    <action selector="login" destination="qsi-wI-3ht" eventType="touchUpInside" id="ob6-jj-0mI"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhu-RY-ryV">
+                                <rect key="frame" x="78" y="259" width="219" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHR-bS-Htq">
+                                <rect key="frame" x="78" y="297" width="219" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKy-Gi-fTb">
+                                <rect key="frame" x="156" y="411" width="64" height="60"/>
+                                <fontDescription key="fontDescription" name="NovitoNova-Thin" family="NovitoNova" pointSize="40"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUp:" destination="qsi-wI-3ht" eventType="touchUpInside" id="A7e-xl-rOe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SECRET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBV-1J-k4M">
+                                <rect key="frame" x="67" y="65" width="230" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NovitoNova-Thin" family="NovitoNova" pointSize="108"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.019607843140000001" green="0.31764705879999999" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.030662541829631872" green="0.64326640528156664" blue="0.88268650425000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.22428696450109387" green="0.66262597982178328" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Dhu-RY-ryV" firstAttribute="top" secondItem="gn8-z4-b1d" secondAttribute="bottom" constant="72" id="0Wy-u9-GMq"/>
                             <constraint firstItem="gn8-z4-b1d" firstAttribute="centerX" secondItem="hqD-YS-6wy" secondAttribute="centerX" id="2dE-8O-kbG"/>
-                            <constraint firstItem="gn8-z4-b1d" firstAttribute="top" secondItem="v7l-z3-DyZ" secondAttribute="bottom" constant="86" id="5xS-M6-Rov"/>
-                            <constraint firstItem="pD3-Qk-CHO" firstAttribute="centerX" secondItem="gn8-z4-b1d" secondAttribute="centerX" id="laS-Aq-LbU"/>
-                            <constraint firstItem="B0Q-EL-dWR" firstAttribute="top" secondItem="pD3-Qk-CHO" secondAttribute="bottom" constant="47" id="oA3-aq-oOJ"/>
+                            <constraint firstItem="1Y6-Pj-uci" firstAttribute="width" secondItem="VHR-bS-Htq" secondAttribute="width" id="36I-ho-UFD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dhu-RY-ryV" secondAttribute="trailing" constant="62" id="3Qr-IK-lR1"/>
+                            <constraint firstItem="oKy-Gi-fTb" firstAttribute="top" secondItem="1Y6-Pj-uci" secondAttribute="bottom" constant="8" id="7Cf-4t-oew"/>
+                            <constraint firstItem="Dhu-RY-ryV" firstAttribute="leading" secondItem="hqD-YS-6wy" secondAttribute="leadingMargin" constant="62" id="IKQ-2V-Ps7"/>
+                            <constraint firstItem="VHR-bS-Htq" firstAttribute="centerX" secondItem="hqD-YS-6wy" secondAttribute="centerX" id="Vc9-oy-UYF"/>
+                            <constraint firstItem="VHR-bS-Htq" firstAttribute="top" secondItem="Dhu-RY-ryV" secondAttribute="bottom" constant="8" id="WLQ-iL-GSf"/>
+                            <constraint firstItem="oKy-Gi-fTb" firstAttribute="centerX" secondItem="hqD-YS-6wy" secondAttribute="centerX" id="Wzv-mX-30A"/>
+                            <constraint firstItem="VHR-bS-Htq" firstAttribute="width" secondItem="Dhu-RY-ryV" secondAttribute="width" id="i1y-V5-FZO"/>
+                            <constraint firstItem="Dhu-RY-ryV" firstAttribute="centerX" secondItem="hqD-YS-6wy" secondAttribute="centerX" id="lJf-Rt-1ZF"/>
+                            <constraint firstItem="1Y6-Pj-uci" firstAttribute="centerX" secondItem="hqD-YS-6wy" secondAttribute="centerX" id="ugS-jt-NMd"/>
+                            <constraint firstItem="1Y6-Pj-uci" firstAttribute="top" secondItem="VHR-bS-Htq" secondAttribute="bottom" constant="16" id="zLa-yC-Abt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="Dhu-RY-ryV" id="Ybh-as-5qz"/>
+                        <outlet property="passwordTextField" destination="VHR-bS-Htq" id="QtA-oy-EPX"/>
                         <segue destination="xbw-qn-io1" kind="presentation" identifier="LoginToChat" id="bZ2-ya-Xaw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9I1-FV-DTe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="389"/>
+            <point key="canvasLocation" x="-154.5" y="386.5"/>
         </scene>
         <!--ChatChat-->
         <scene sceneID="hjK-mg-afr">
@@ -76,18 +123,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oDz-bW-dqE"/>
+                    <navigationItem key="navigationItem" id="6e9-JS-GZP">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="ojb-5P-X06">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVB-pW-n4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="389"/>
+            <point key="canvasLocation" x="1798" y="109"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2tA-my-e0C">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xbw-qn-io1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1vQ-8N-j2Y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1vQ-8N-j2Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.019607843140000001" green="0.31764705879999999" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -102,7 +153,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Puu-Xz-pPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="388"/>
+            <point key="canvasLocation" x="809" y="110"/>
         </scene>
     </scenes>
 </document>

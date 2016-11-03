@@ -21,6 +21,8 @@
 		32B2A759C1687797B2FEFECE /* Pods-FirebaseChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat.debug.xcconfig"; sourceTree = "<group>"; };
 		4FC96A6D3BB73F9B3A362DE5 /* Pods_FirebaseChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CDA4840F629542FCC675B5 /* Pods-FirebaseChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat.release.xcconfig"; sourceTree = "<group>"; };
+		AB8094211DC77A8300A76CAF /* NovitoNova-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NovitoNova-Thin.otf"; path = "../NovitoNova-Thin.otf"; sourceTree = "<group>"; };
+		AB8094221DC77B9800A76CAF /* NovitoNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NovitoNova-Regular.otf"; sourceTree = "<group>"; };
 		ABA08D1D1DC26A3400389DEE /* FirebaseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA08D201DC26A3400389DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABA08D221DC26A3400389DEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -82,16 +84,26 @@
 		ABA08D1F1DC26A3400389DEE /* FirebaseChat */ = {
 			isa = PBXGroup;
 			children = (
+				ABA08D391DC28E3600389DEE /* View Controllers */,
 				ABA08D201DC26A3400389DEE /* AppDelegate.swift */,
-				ABA08D221DC26A3400389DEE /* LoginViewController.swift */,
-				ABA08D321DC26B0500389DEE /* ChatViewController.swift */,
 				ABA08D241DC26A3400389DEE /* Main.storyboard */,
 				ABA08D271DC26A3400389DEE /* Assets.xcassets */,
 				ABA08D291DC26A3400389DEE /* LaunchScreen.storyboard */,
 				ABA08D341DC26E0B00389DEE /* GoogleService-Info.plist */,
 				ABA08D2C1DC26A3400389DEE /* Info.plist */,
+				AB8094221DC77B9800A76CAF /* NovitoNova-Regular.otf */,
+				AB8094211DC77A8300A76CAF /* NovitoNova-Thin.otf */,
 			);
 			path = FirebaseChat;
+			sourceTree = "<group>";
+		};
+		ABA08D391DC28E3600389DEE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABA08D221DC26A3400389DEE /* LoginViewController.swift */,
+				ABA08D321DC26B0500389DEE /* ChatViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,12 +136,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Alex Alexandrovych";
 				TargetAttributes = {
 					ABA08D1C1DC26A3400389DEE = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = WBB4QL456R;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -265,6 +278,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -293,6 +307,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -315,6 +330,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -335,6 +351,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -347,6 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WBB4QL456R;
 				INFOPLIST_FILE = FirebaseChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.FirebaseChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,6 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WBB4QL456R;
 				INFOPLIST_FILE = FirebaseChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.FirebaseChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
