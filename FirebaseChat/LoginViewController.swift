@@ -8,47 +8,89 @@
 
 import UIKit
 import Firebase
+import FacebookCore
+import FacebookLogin
 
-struct Identifiers {
-    static let segueIdentifier = "LoginToChat"
-}
-
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    private struct Identifiers {
+        static let segueIdentifier = "Login"
+    }
+    
+    @IBOutlet fileprivate weak var emailTextField: UITextField! { didSet { emailTextField.delegate = self } }
+    @IBOutlet fileprivate weak var passwordTextField: UITextField! { didSet { passwordTextField.delegate = self } }
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginViaFacebookButton: UIButton!
     
     var reference: FIRAuth!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginButton.layer.cornerRadius = 10.0
+        loginViaFacebookButton.layer.cornerRadius = 10.0
+        
+//        let facebookLoginButton = UIButton()
+//        facebookLoginButton.center = view.center
+//        view.addSubview(facebookLoginButton)
+
         reference = FIRAuth.auth()
-        reference.addStateDidChangeListener() { auth, user in
+
+        reference.addStateDidChangeListener() { (auth, user) in
             if user != nil {
                 self.performSegue(withIdentifier: Identifiers.segueIdentifier, sender: nil)
-            } else {
-                self.emailTextField.text = ""
-                self.passwordTextField.text = ""
+            }
+        }
+        passwordTextField?.text = ""
+    }
+    
+    @IBAction func loginViaFacebook() {
+        LoginManager().logIn([.email, .publicProfile], viewController: self) { result in
+            switch result {
+            case .failed(let error):
+                print("Failed with error: \(error.localizedDescription)")
+            case .cancelled:
+                print("cancelled!")
+            case .success(_, _, let accessToken):
+                let credentials = FIRFacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
+                self.reference.signIn(with: credentials) { (user, error) in
+                    guard error == nil else {
+                        print("There was an error during login process: \(error!.localizedDescription)")
+                        return
+                    }
+                    if user != nil {
+                        self.performSegue(withIdentifier: Identifiers.segueIdentifier, sender: nil)
+                    } else {
+                        print("User is nil")
+                    }
+                }
+
             }
         }
     }
     
     @IBAction func login() {
-        reference.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!)
-        /*
-        ref.signInAnonymously { (user, error) in
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
+        if let email = emailTextField.text,
+            let password = passwordTextField.text,
+            email.characters.count > 0 && password.characters.count > 0 {
+            reference.signIn(withEmail: email, password: password) { (user, error) in
+                guard error == nil else {
+                    print("There was an error during login process: \(error!.localizedDescription)")
+                    return
+                }
+                if user != nil {
+                    self.performSegue(withIdentifier: Identifiers.segueIdentifier, sender: nil)
+                } else {
+                    print("User is nil")
+                }
             }
-            self.performSegue(withIdentifier: segueIdentifier, sender: nil)
         }
-        */
+
     }
     
     @IBAction func signUp(_ sender: Any) {
-        let alert = UIAlertController(title: "Register",
-                                      message: "Register",
+        let alert = UIAlertController(title: "Sign up",
+                                      message: "You need to enter:",
                                       preferredStyle: .alert)
         
         let saveAction = UIAlertAction(title: "Save",
@@ -86,11 +128,13 @@ class LoginViewController: UIViewController {
     
     }
     
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        if let chatVC = (segue.destination as? UINavigationController)?.viewControllers.first as? ChatViewController {
-            chatVC.senderId = reference.currentUser?.uid ?? ""
-            chatVC.senderDisplayName = reference.currentUser?.displayName ?? ""
+        
+        if let groupVC = (segue.destination as? UINavigationController)?.viewControllers.first as? GroupsTableViewController {
+        
+            groupVC.senderDisplayName = reference.currentUser?.displayName ?? "Noname"
         }
     }
     
@@ -104,6 +148,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         case passwordTextField:
             textField.resignFirstResponder()
+            login()
         default:
             return false
         }
