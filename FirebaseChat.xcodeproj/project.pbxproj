@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB8EDF3D1DE30DC10038B059 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EDF3C1DE30DC10038B059 /* GroupsTableViewController.swift */; };
+		AB8EDF3F1DE32AF10038B059 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EDF3E1DE32AF10038B059 /* Group.swift */; };
+		AB8EDF461DE3496E0038B059 /* NovitoNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AB8094221DC77B9800A76CAF /* NovitoNova-Regular.otf */; };
+		AB8EDF471DE349700038B059 /* NovitoNova-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AB8094211DC77A8300A76CAF /* NovitoNova-Thin.otf */; };
+		AB8EDF4A1DE3AC510038B059 /* CreateGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EDF491DE3AC510038B059 /* CreateGroupCell.swift */; };
+		AB8EDF4C1DE3C1180038B059 /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EDF4B1DE3C1180038B059 /* UIImage+GIF.swift */; };
 		ABA08D211DC26A3400389DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA08D201DC26A3400389DEE /* AppDelegate.swift */; };
 		ABA08D231DC26A3400389DEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA08D221DC26A3400389DEE /* LoginViewController.swift */; };
 		ABA08D261DC26A3400389DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA08D241DC26A3400389DEE /* Main.storyboard */; };
@@ -23,6 +29,11 @@
 		59CDA4840F629542FCC675B5 /* Pods-FirebaseChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat.release.xcconfig"; sourceTree = "<group>"; };
 		AB8094211DC77A8300A76CAF /* NovitoNova-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NovitoNova-Thin.otf"; path = "../NovitoNova-Thin.otf"; sourceTree = "<group>"; };
 		AB8094221DC77B9800A76CAF /* NovitoNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NovitoNova-Regular.otf"; sourceTree = "<group>"; };
+		AB8EDF3C1DE30DC10038B059 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		AB8EDF3E1DE32AF10038B059 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		AB8EDF481DE3A9390038B059 /* FirebaseChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseChat.entitlements; sourceTree = "<group>"; };
+		AB8EDF491DE3AC510038B059 /* CreateGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupCell.swift; sourceTree = "<group>"; };
+		AB8EDF4B1DE3C1180038B059 /* UIImage+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
 		ABA08D1D1DC26A3400389DEE /* FirebaseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA08D201DC26A3400389DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABA08D221DC26A3400389DEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -63,9 +74,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB8EDF421DE3490C0038B059 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB8094221DC77B9800A76CAF /* NovitoNova-Regular.otf */,
+				AB8094211DC77A8300A76CAF /* NovitoNova-Thin.otf */,
+			);
+			name = Resources;
+			path = FirebaseChat;
+			sourceTree = "<group>";
+		};
+		AB8EDF431DE3491A0038B059 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABA08D241DC26A3400389DEE /* Main.storyboard */,
+				AB8EDF4B1DE3C1180038B059 /* UIImage+GIF.swift */,
+				ABA08D271DC26A3400389DEE /* Assets.xcassets */,
+				ABA08D291DC26A3400389DEE /* LaunchScreen.storyboard */,
+				ABA08D341DC26E0B00389DEE /* GoogleService-Info.plist */,
+				ABA08D2C1DC26A3400389DEE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB8EDF441DE3492E0038B059 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB8EDF3E1DE32AF10038B059 /* Group.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AB8EDF451DE349340038B059 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB8EDF491DE3AC510038B059 /* CreateGroupCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		ABA08D141DC26A3400389DEE = {
 			isa = PBXGroup;
 			children = (
+				AB8EDF421DE3490C0038B059 /* Resources */,
 				ABA08D1F1DC26A3400389DEE /* FirebaseChat */,
 				ABA08D1E1DC26A3400389DEE /* Products */,
 				78D6B1DBBB978615494399A4 /* Pods */,
@@ -84,15 +135,12 @@
 		ABA08D1F1DC26A3400389DEE /* FirebaseChat */ = {
 			isa = PBXGroup;
 			children = (
-				ABA08D391DC28E3600389DEE /* View Controllers */,
+				AB8EDF481DE3A9390038B059 /* FirebaseChat.entitlements */,
 				ABA08D201DC26A3400389DEE /* AppDelegate.swift */,
-				ABA08D241DC26A3400389DEE /* Main.storyboard */,
-				ABA08D271DC26A3400389DEE /* Assets.xcassets */,
-				ABA08D291DC26A3400389DEE /* LaunchScreen.storyboard */,
-				ABA08D341DC26E0B00389DEE /* GoogleService-Info.plist */,
-				ABA08D2C1DC26A3400389DEE /* Info.plist */,
-				AB8094221DC77B9800A76CAF /* NovitoNova-Regular.otf */,
-				AB8094211DC77A8300A76CAF /* NovitoNova-Thin.otf */,
+				AB8EDF441DE3492E0038B059 /* Model */,
+				ABA08D391DC28E3600389DEE /* View Controllers */,
+				AB8EDF451DE349340038B059 /* View */,
+				AB8EDF431DE3491A0038B059 /* Supporting Files */,
 			);
 			path = FirebaseChat;
 			sourceTree = "<group>";
@@ -101,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				ABA08D221DC26A3400389DEE /* LoginViewController.swift */,
+				AB8EDF3C1DE30DC10038B059 /* GroupsTableViewController.swift */,
 				ABA08D321DC26B0500389DEE /* ChatViewController.swift */,
 			);
 			name = "View Controllers";
@@ -144,6 +193,11 @@
 						DevelopmentTeam = WBB4QL456R;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -171,7 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABA08D2B1DC26A3400389DEE /* LaunchScreen.storyboard in Resources */,
+				AB8EDF461DE3496E0038B059 /* NovitoNova-Regular.otf in Resources */,
 				ABA08D351DC26E0B00389DEE /* GoogleService-Info.plist in Resources */,
+				AB8EDF471DE349700038B059 /* NovitoNova-Thin.otf in Resources */,
 				ABA08D281DC26A3400389DEE /* Assets.xcassets in Resources */,
 				ABA08D261DC26A3400389DEE /* Main.storyboard in Resources */,
 			);
@@ -235,6 +291,10 @@
 				ABA08D231DC26A3400389DEE /* LoginViewController.swift in Sources */,
 				ABA08D331DC26B0500389DEE /* ChatViewController.swift in Sources */,
 				ABA08D211DC26A3400389DEE /* AppDelegate.swift in Sources */,
+				AB8EDF3F1DE32AF10038B059 /* Group.swift in Sources */,
+				AB8EDF3D1DE30DC10038B059 /* GroupsTableViewController.swift in Sources */,
+				AB8EDF4C1DE3C1180038B059 /* UIImage+GIF.swift in Sources */,
+				AB8EDF4A1DE3AC510038B059 /* CreateGroupCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = FirebaseChat/FirebaseChat.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = WBB4QL456R;
 				INFOPLIST_FILE = FirebaseChat/Info.plist;
@@ -382,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = FirebaseChat/FirebaseChat.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = WBB4QL456R;
 				INFOPLIST_FILE = FirebaseChat/Info.plist;
