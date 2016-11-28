@@ -162,6 +162,8 @@ final class ChatViewController: JSQMessagesViewController {
         self.present(picker, animated: true, completion:nil)
     }
     
+    
+    
     func sendPhotoMessage() -> String? {
         let itemRef = messageRef.childByAutoId()
         
@@ -205,7 +207,6 @@ final class ChatViewController: JSQMessagesViewController {
                     text.characters.count > 0 {
 
                     self.addMessage(withID: id, name: name, text: text)
-                    
                     self.finishReceivingMessage()
                 } else if let id = messageData["senderId"] as? String,
                     let photoURL = messageData["photoURL"] as? String {

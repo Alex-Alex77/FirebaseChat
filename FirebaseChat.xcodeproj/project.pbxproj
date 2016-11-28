@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB4157241DECDB9800CF7B0A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4157231DECDB9800CF7B0A /* MainNavigationController.swift */; };
+		AB4157261DECF19000CF7B0A /* UserDefaults+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4157251DECF19000CF7B0A /* UserDefaults+Helpers.swift */; };
 		AB8EDF3D1DE30DC10038B059 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EDF3C1DE30DC10038B059 /* GroupsTableViewController.swift */; };
 		AB8EDF3F1DE32AF10038B059 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EDF3E1DE32AF10038B059 /* Group.swift */; };
 		AB8EDF461DE3496E0038B059 /* NovitoNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AB8094221DC77B9800A76CAF /* NovitoNova-Regular.otf */; };
@@ -27,6 +29,8 @@
 		32B2A759C1687797B2FEFECE /* Pods-FirebaseChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat.debug.xcconfig"; sourceTree = "<group>"; };
 		4FC96A6D3BB73F9B3A362DE5 /* Pods_FirebaseChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CDA4840F629542FCC675B5 /* Pods-FirebaseChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat.release.xcconfig"; sourceTree = "<group>"; };
+		AB4157231DECDB9800CF7B0A /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		AB4157251DECF19000CF7B0A /* UserDefaults+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Helpers.swift"; sourceTree = "<group>"; };
 		AB8094211DC77A8300A76CAF /* NovitoNova-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NovitoNova-Thin.otf"; path = "../NovitoNova-Thin.otf"; sourceTree = "<group>"; };
 		AB8094221DC77B9800A76CAF /* NovitoNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NovitoNova-Regular.otf"; sourceTree = "<group>"; };
 		AB8EDF3C1DE30DC10038B059 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			children = (
 				ABA08D241DC26A3400389DEE /* Main.storyboard */,
 				AB8EDF4B1DE3C1180038B059 /* UIImage+GIF.swift */,
+				AB4157251DECF19000CF7B0A /* UserDefaults+Helpers.swift */,
 				ABA08D271DC26A3400389DEE /* Assets.xcassets */,
 				ABA08D291DC26A3400389DEE /* LaunchScreen.storyboard */,
 				ABA08D341DC26E0B00389DEE /* GoogleService-Info.plist */,
@@ -137,6 +142,7 @@
 			children = (
 				AB8EDF481DE3A9390038B059 /* FirebaseChat.entitlements */,
 				ABA08D201DC26A3400389DEE /* AppDelegate.swift */,
+				AB4157231DECDB9800CF7B0A /* MainNavigationController.swift */,
 				AB8EDF441DE3492E0038B059 /* Model */,
 				ABA08D391DC28E3600389DEE /* View Controllers */,
 				AB8EDF451DE349340038B059 /* View */,
@@ -290,9 +296,11 @@
 			files = (
 				ABA08D231DC26A3400389DEE /* LoginViewController.swift in Sources */,
 				ABA08D331DC26B0500389DEE /* ChatViewController.swift in Sources */,
+				AB4157241DECDB9800CF7B0A /* MainNavigationController.swift in Sources */,
 				ABA08D211DC26A3400389DEE /* AppDelegate.swift in Sources */,
 				AB8EDF3F1DE32AF10038B059 /* Group.swift in Sources */,
 				AB8EDF3D1DE30DC10038B059 /* GroupsTableViewController.swift in Sources */,
+				AB4157261DECF19000CF7B0A /* UserDefaults+Helpers.swift in Sources */,
 				AB8EDF4C1DE3C1180038B059 /* UIImage+GIF.swift in Sources */,
 				AB8EDF4A1DE3AC510038B059 /* CreateGroupCell.swift in Sources */,
 			);

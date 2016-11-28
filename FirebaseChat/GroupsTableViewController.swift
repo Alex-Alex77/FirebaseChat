@@ -30,13 +30,14 @@ final class GroupsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .done, target: nil, action: nil)
         
         observeGroups()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        senderDisplayName = FIRAuth.auth()?.currentUser?.displayName ?? "Noname"
         title = senderDisplayName
 
     }
@@ -53,7 +54,11 @@ final class GroupsTableViewController: UITableViewController {
         do {
             LoginManager().logOut()
             try FIRAuth.auth()?.signOut()
-            dismiss(animated: true, completion: nil)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            present(loginVC, animated: true, completion: nil)
+            UserDefaults.standard.setIsLoggedIn(false)
         } catch {
             print("Cannot logout: \(error.localizedDescription)")
         }
@@ -70,10 +75,6 @@ final class GroupsTableViewController: UITableViewController {
             newGroupRef.setValue(groupItem)
             newGroupTextField?.text = ""
         }
-    }
-    
-    fileprivate func showLoginScreen() {
-        performSegue(withIdentifier: "ShowLoginScreen", sender: self)
     }
     
     // MARK: Firebase related methods
@@ -172,7 +173,7 @@ final class GroupsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
+//        super.prepare(for: segue, sender: sender)
         
         if let group = sender as? Group {
             if let chatVC = segue.destination as? ChatViewController {

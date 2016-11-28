@@ -8,10 +8,10 @@
 
 import Foundation
 
-internal class Group {
-    internal let id: String
-    internal let name: String
-    internal let creator: String
+class Group {
+    let id: String
+    let name: String
+    let creator: String
     
     init(id: String, name: String, creator: String) {
         self.id = id
