@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qsi-wI-3ht">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
         <!--Login View Controller-->
         <scene sceneID="qd1-WP-Crg">
             <objects>
-                <viewController id="qsi-wI-3ht" customClass="LoginViewController" customModule="FirebaseChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="qsi-wI-3ht" customClass="LoginViewController" customModule="FirebaseChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v7l-z3-DyZ"/>
                         <viewControllerLayoutGuide type="bottom" id="B0Q-EL-dWR"/>
@@ -45,7 +45,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.028291495516896248" green="0.64299207925796509" blue="0.88439291715621948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.031372549019607843" green="0.64313725490196072" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
@@ -61,7 +61,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="Login via Facebook">
-                                    <color key="titleColor" red="0.028291495520000001" green="0.64299207930000002" blue="0.88439291720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.031372549019607843" green="0.64313725490196072" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
@@ -90,7 +90,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKy-Gi-fTb">
-                                <rect key="frame" x="156.5" y="462" width="61" height="33"/>
+                                <rect key="frame" x="157" y="462" width="61" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,7 +101,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.030662541829631872" green="0.64326640528156664" blue="0.88268650425000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.22428696450109387" green="0.66262597982178328" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gn8-z4-b1d" firstAttribute="centerX" secondItem="hqD-YS-6wy" secondAttribute="centerX" id="2dE-8O-kbG"/>
                             <constraint firstItem="Hek-dr-KCN" firstAttribute="centerY" secondItem="hqD-YS-6wy" secondAttribute="centerY" id="7Oh-ov-kS4"/>
@@ -126,17 +125,16 @@
                         <outlet property="loginButton" destination="1Y6-Pj-uci" id="mZH-mM-rVk"/>
                         <outlet property="loginViaFacebookButton" destination="wf8-Hf-V9j" id="lCz-wh-bVA"/>
                         <outlet property="passwordTextField" destination="VHR-bS-Htq" id="QtA-oy-EPX"/>
-                        <segue destination="xbw-qn-io1" kind="presentation" identifier="Login" id="7gL-1Z-GRO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9I1-FV-DTe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="107"/>
+            <point key="canvasLocation" x="2439" y="-582"/>
         </scene>
         <!--Groups Table View Controller-->
         <scene sceneID="yRQ-24-jdd">
             <objects>
-                <tableViewController id="tXF-ec-JV0" customClass="GroupsTableViewController" customModule="FirebaseChat" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GroupsTableViewController" id="tXF-ec-JV0" customClass="GroupsTableViewController" customModule="FirebaseChat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4MC-tE-e6o">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,13 +202,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="TuD-VM-t0Z">
                         <nil key="title"/>
-                        <barButtonItem key="backBarButtonItem" title=" " id="Iip-Dk-ovy"/>
                         <barButtonItem key="leftBarButtonItem" title="Log out" id="LZ5-H1-XlH">
                             <connections>
                                 <action selector="logout:" destination="tXF-ec-JV0" id="k3q-cU-bk6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <segue destination="i4c-Z2-kjf" kind="show" identifier="ShowChat" id="dsM-FX-eTR"/>
                     </connections>
@@ -218,29 +216,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4X-lb-Xki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2453.5999999999999" y="106.59670164917542"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2tA-my-e0C">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xbw-qn-io1" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="1vQ-8N-j2Y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.028291495516896248" green="0.64299207925796509" blue="0.88439291715621948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tXF-ec-JV0" kind="relationship" relationship="rootViewController" id="rw5-ie-i46"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Puu-Xz-pPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1618" y="107"/>
         </scene>
         <!--ChatChat-->
         <scene sceneID="hkB-V2-so3">

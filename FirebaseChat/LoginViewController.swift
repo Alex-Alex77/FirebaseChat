@@ -26,7 +26,6 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loginButton.layer.cornerRadius = 10.0
         loginViaFacebookButton.layer.cornerRadius = 10.0
         
@@ -36,11 +35,11 @@ final class LoginViewController: UIViewController {
 
         reference = FIRAuth.auth()
 
-        reference.addStateDidChangeListener() { (auth, user) in
-            if user != nil {
-                self.performSegue(withIdentifier: Identifiers.segueIdentifier, sender: nil)
-            }
-        }
+//        reference.addStateDidChangeListener() { (auth, user) in
+//            if user != nil {
+//                self.finishLoggingIn()
+//            }
+//        }
         passwordTextField?.text = ""
     }
     
@@ -59,7 +58,7 @@ final class LoginViewController: UIViewController {
                         return
                     }
                     if user != nil {
-                        self.performSegue(withIdentifier: Identifiers.segueIdentifier, sender: nil)
+                        self.finishLoggingIn()
                     } else {
                         print("User is nil")
                     }
@@ -79,7 +78,7 @@ final class LoginViewController: UIViewController {
                     return
                 }
                 if user != nil {
-                    self.performSegue(withIdentifier: Identifiers.segueIdentifier, sender: nil)
+                    self.finishLoggingIn()
                 } else {
                     print("User is nil")
                 }
@@ -128,14 +127,18 @@ final class LoginViewController: UIViewController {
     
     }
     
-    // MARK: Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        if let groupVC = (segue.destination as? UINavigationController)?.viewControllers.first as? GroupsTableViewController {
-        
-            groupVC.senderDisplayName = reference.currentUser?.displayName ?? "Noname"
+    fileprivate func finishLoggingIn() {
+        let rootVC = UIApplication.shared.keyWindow?.rootViewController
+        guard let mainNC = rootVC as? MainNavigationController else {
+            return
         }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let groupsVC = storyboard.instantiateViewController(withIdentifier: "GroupsTableViewController")
+        mainNC.viewControllers = [groupsVC]
+        
+        UserDefaults.standard.setIsLoggedIn(true)
+        
+        dismiss(animated: true, completion: nil)
     }
     
 }
@@ -156,3 +159,4 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
 }
+
